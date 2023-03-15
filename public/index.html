@@ -1,12 +1,749 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OROCOM REST</title>
-</head>
-<body>
-    <h1>Acceso restringido</h1>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OROCOM</title>
+  <meta name="description" content="Llegamos donde más nos necesitan.. Brindamos cobertura, acceso, uso y apropiación de las nuevas tecnologías a la población.">
+  <meta name="keywords" content="orocom, fibraoptica, fibraperu, internetenlugaresalejados, internet, fibraoptica, peru, poblacionesvulnerables">
+  <meta name="title" content="Orocom, la red mas grande en fibra optica">
+  <style type="text/css">@font-face{font-family:'Poppins';font-style:normal;font-weight:300;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z11lFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;}@font-face{font-family:'Poppins';font-style:normal;font-weight:300;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1JlFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Poppins';font-style:normal;font-weight:300;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFd2JQEk.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Poppins';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJbecnFHGPezSQ.woff2) format('woff2');unicode-range:U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;}@font-face{font-family:'Poppins';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJnecnFHGPezSQ.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Poppins';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z11lFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1JlFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z11lFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1JlFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z11lFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1JlFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+
+  <style>html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a{background-color:transparent}a:active,a:hover{outline:0}@media print{*,*:before,*:after{color:#000 !important;text-shadow:none !important;background:transparent !important;-webkit-box-shadow:none !important;box-shadow:none !important}a,a:visited{text-decoration:underline}}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0, 0, 0, 0)}body{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}@-webkit-keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}@-ms-viewport{width:device-width}</style><link rel="stylesheet" href="/assets/css/bootstrap.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="/assets/css/bootstrap.css"></noscript>
+  <!-- <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="">
+  <link type="text/css"  href="" />
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="" media="screen" />
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href=""> -->
+  <!-- Bootstrap CSS -->
+  <!-- Fonts -->
+  <!-- Mobile Menu -->
+  <!-- OWL CAROUSEL
+    ================================================== -->
+  <!-- Magnific Popup core CSS file -->
+  <!-- SELECTBOX
+    ================================================== -->
+  <!-- REVOLUTION STYLE SHEETS -->
+  <!-- REVOLUTION LAYERS STYLES -->
+  <!-- REVOLUTION NAVIGATION STYLES -->
+  <!-- Main Style -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+
+  <!-- Favicons
+			================================================== -->
+  <link rel="shortcut icon" href="/assets/images/favicon.png">
+<style>@charset "UTF-8";a,a:hover{text-decoration:none}a:hover,a:focus{outline:none;text-decoration:none}body{font-family:Poppins,sans-serif;font-size:13px;line-height:24px;color:#727272;font-weight:400}.fixbtt{display:none;position:fixed;text-align:center;right:30px;bottom:30px;color:#fff;cursor:pointer;border-radius:2px;z-index:10000;height:40px;width:40px;line-height:40px;background-color:#0006;background-repeat:no-repeat;background-position:center;transition:background-color .1s linear}.fixbtt:hover{background-color:#0a2c4e;color:#fff}:root{--surface-a:#ffffff;--surface-b:#f8f9fa;--surface-c:#e9ecef;--surface-d:#dee2e6;--surface-e:#ffffff;--surface-f:#ffffff;--text-color:#495057;--text-color-secondary:#6c757d;--primary-color:#3B82F6;--primary-color-text:#ffffff;--font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;--surface-0:#ffffff;--surface-50:#FAFAFA;--surface-100:#F5F5F5;--surface-200:#EEEEEE;--surface-300:#E0E0E0;--surface-400:#BDBDBD;--surface-500:#9E9E9E;--surface-600:#757575;--surface-700:#616161;--surface-800:#424242;--surface-900:#212121;--gray-50:#FAFAFA;--gray-100:#F5F5F5;--gray-200:#EEEEEE;--gray-300:#E0E0E0;--gray-400:#BDBDBD;--gray-500:#9E9E9E;--gray-600:#757575;--gray-700:#616161;--gray-800:#424242;--gray-900:#212121;--content-padding:1.25rem;--inline-spacing:.5rem;--border-radius:6px;--surface-ground:#eff3f8;--surface-section:#ffffff;--surface-card:#ffffff;--surface-overlay:#ffffff;--surface-border:#dfe7ef;--surface-hover:#f6f9fc;--focus-ring:0 0 0 .2rem #BFDBFE;--maskbg:rgba(0, 0, 0, .4);color-scheme:light}*{box-sizing:border-box}:root{--blue-50:#f5f9ff;--blue-100:#d0e1fd;--blue-200:#abc9fb;--blue-300:#85b2f9;--blue-400:#609af8;--blue-500:#3b82f6;--blue-600:#326fd1;--blue-700:#295bac;--blue-800:#204887;--blue-900:#183462;--green-50:#f4fcf7;--green-100:#caf1d8;--green-200:#a0e6ba;--green-300:#76db9b;--green-400:#4cd07d;--green-500:#22c55e;--green-600:#1da750;--green-700:#188a42;--green-800:#136c34;--green-900:#0e4f26;--yellow-50:#fefbf3;--yellow-100:#faedc4;--yellow-200:#f6de95;--yellow-300:#f2d066;--yellow-400:#eec137;--yellow-500:#eab308;--yellow-600:#c79807;--yellow-700:#a47d06;--yellow-800:#816204;--yellow-900:#5e4803;--cyan-50:#f3fbfd;--cyan-100:#c3edf5;--cyan-200:#94e0ed;--cyan-300:#65d2e4;--cyan-400:#35c4dc;--cyan-500:#06b6d4;--cyan-600:#059bb4;--cyan-700:#047f94;--cyan-800:#036475;--cyan-900:#024955;--pink-50:#fef6fa;--pink-100:#fad3e7;--pink-200:#f7b0d3;--pink-300:#f38ec0;--pink-400:#f06bac;--pink-500:#ec4899;--pink-600:#c93d82;--pink-700:#a5326b;--pink-800:#822854;--pink-900:#5e1d3d;--indigo-50:#f7f7fe;--indigo-100:#dadafc;--indigo-200:#bcbdf9;--indigo-300:#9ea0f6;--indigo-400:#8183f4;--indigo-500:#6366f1;--indigo-600:#5457cd;--indigo-700:#4547a9;--indigo-800:#363885;--indigo-900:#282960;--teal-50:#f3fbfb;--teal-100:#c7eeea;--teal-200:#9ae0d9;--teal-300:#6dd3c8;--teal-400:#41c5b7;--teal-500:#14b8a6;--teal-600:#119c8d;--teal-700:#0e8174;--teal-800:#0b655b;--teal-900:#084a42;--orange-50:#fff8f3;--orange-100:#feddc7;--orange-200:#fcc39b;--orange-300:#fba86f;--orange-400:#fa8e42;--orange-500:#f97316;--orange-600:#d46213;--orange-700:#ae510f;--orange-800:#893f0c;--orange-900:#642e09;--bluegray-50:#f7f8f9;--bluegray-100:#dadee3;--bluegray-200:#bcc3cd;--bluegray-300:#9fa9b7;--bluegray-400:#818ea1;--bluegray-500:#64748b;--bluegray-600:#556376;--bluegray-700:#465161;--bluegray-800:#37404c;--bluegray-900:#282e38;--purple-50:#fbf7ff;--purple-100:#ead6fd;--purple-200:#dab6fc;--purple-300:#c996fa;--purple-400:#b975f9;--purple-500:#a855f7;--purple-600:#8f48d2;--purple-700:#763cad;--purple-800:#5c2f88;--purple-900:#432263;--red-50:#fff5f5;--red-100:#ffd0ce;--red-200:#ffaca7;--red-300:#ff8780;--red-400:#ff6259;--red-500:#ff3d32;--red-600:#d9342b;--red-700:#b32b23;--red-800:#8c221c;--red-900:#661814;--primary-50:#f5f9ff;--primary-100:#d0e1fd;--primary-200:#abc9fb;--primary-300:#85b2f9;--primary-400:#609af8;--primary-500:#3b82f6;--primary-600:#326fd1;--primary-700:#295bac;--primary-800:#204887;--primary-900:#183462}@font-face{font-family:FontAwesome;src:url(fontawesome-webfont.f0bc7f41e7931cea.eot?v=4.6.3);src:url(fontawesome-webfont.f0bc7f41e7931cea.eot?#iefix&v=4.6.3) format("embedded-opentype"),url(fontawesome-webfont.263ad4e5760b3f71.woff2?v=4.6.3) format("woff2"),url(fontawesome-webfont.f9f5fef431c65591.woff?v=4.6.3) format("woff"),url(fontawesome-webfont.be578d115be007c4.ttf?v=4.6.3) format("truetype"),url(fontawesome-webfont.139c0f1408af532e.svg?v=4.6.3#fontawesomeregular) format("svg");font-weight:400;font-style:normal}.fa{display:inline-block;font:14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-chevron-up:before{content:"\f077"}html,body{-webkit-backface-visibility:hidden}</style><link rel="stylesheet" href="styles.c0a9d2c55daa0451.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.c0a9d2c55daa0451.css"></noscript></head>
+
+<body class="royal_loader" style="height: 100%;">
+
+  <!-- royal_loader -->
+  <app-root></app-root>
+  <!-- /page -->
+  <a id="to-the-top" class="fixbtt bg-hover-theme"><i class="fa fa-chevron-up"></i></a>
+  <script src="/assets/js/vendor/jquery.min.js"></script>
+  <script src="/assets/js/plugins/jquery.waypoints.min.js"></script>
+  <script src="/assets/js/vendor/bootstrap.js"></script>
+  <script src="/assets/js/plugins/jquery.sticky-kit.min.js"></script>
+  <script type="text/javascript" src="/assets/js/plugins/jquery.mmenu.all.min.js"></script>
+  <script type="text/javascript" src="/assets/js/plugins/mobilemenu.js"></script>
+  <script type="text/javascript" src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script type="text/javascript" src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+  <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script src="/assets/js/plugins/slider-home-3.js"></script>
+  <script src="/assets/js/plugins/owl.carousel.js"></script>
+  <script src="/assets/js/plugins/owl.js"></script>
+  <script type="text/javascript" src="/assets/js/plugins/royal_preloader.js"></script>
+  <script src="/assets/js/plugins/jquery.parallax-1.1.3.js"></script>
+  <script src="/assets/js/plugins/fancySelect.js"></script>
+  <script src="/assets/js/plugins/lang-select.js"></script>
+  <script src="/assets/js/plugins/cb-select.js"></script>
+  <script src="/assets/js/plugins/jquery.magnific-popup.min.js"></script>
+  <script src="/assets/js/plugins/lightbox.js"></script>
+  <script src="/assets/js/plugins/jquery.counterup.min.js"></script>
+  <script src="/assets/js/plugins/counterup.js"></script>
+  <script src="/assets/js/plugins/twitterFetcher.js"></script>
+  <script src="/assets/js/plugins/tweets-footer.js"></script>
+  <script src="/assets/js/plugins/template.js"></script>
+
+  <!-- INICIO -->
+  <script>
+    $(function () {
+      $('#form-contacto').submit(function (e) {
+        e.preventDefault();
+        var data = $(this).serialize();
+        console.log('data', data);
+        $.post('include/send-contacto.php', data, function (resp) {
+          if (resp.error) {
+            $('#div-contacto').html('<h4>Error al Enviar Mensaje</h4>');
+          } else {
+            $('#div-contacto').html('<h4>Mensaje Enviado Correctamente</h4>');
+          }
+        }, 'json').fail(function () {
+          $('#div-contacto').html('<h4>Error al Enviar Mensaje</h4>');
+        });
+        return false;
+      });
+    });
+  </script>
+
+  <!-- NOSOTROS -->
+  <script>
+    $(function () {
+      $('#form-boletin').submit(function (e) {
+        e.preventDefault();
+        var data = $(this).serialize();
+        console.log('data', data);
+        $.post('include/send-boletin.php', data, function (resp) {
+          if (resp.error) {
+            alert('Error al Enviar Mensaje');
+            $('#form-boletin').trigger('reset');
+          } else {
+            alert('Mensaje enviado correctamente');
+            $('#form-boletin').trigger('reset');
+          }
+        }, 'json').fail(function () {
+          alert('Error al Enviar Mensaje');
+          $('#form-boletin').trigger('reset');
+        });
+      });
+    });
+  </script>
+
+  <!-- COBERTURA -->
+  <script>
+    $(function () {
+      $('#form-contacto').submit(function (e) {
+        e.preventDefault();
+        var data = $(this).serialize();
+        console.log('data', data);
+        $.post('include/send-contacto.php', data, function (resp) {
+          if (resp.error) {
+            $('#div-contacto').html('<h4>Error al Enviar Mensaje</h4>');
+          } else {
+            $('#div-contacto').html('<h4>Mensaje Enviado Correctamente</h4>');
+          }
+        }, 'json').fail(function () {
+          $('#div-contacto').html('<h4>Error al Enviar Mensaje</h4>');
+        });
+        return false;
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).on('change.fs', '#select-dep', function (e) {
+      var dep = $(this).val();
+      console.log('dep', dep);
+      $('#svg-mapa path').removeClass('active');
+      $('#svg-mapa #' + dep).addClass('active');
+    });
+  </script>
+  <script>
+    var provincias =
+      [
+        {
+          'name': '= PROVINCIA =',
+          'distritos': [
+            {
+              'name': '= DISTRITO =',
+              'localidades': [
+                '= LOCALIDAD ='
+              ]
+            }
+          ]
+        },
+        {
+          'name': 'CANDARAVE',
+          'distritos': [
+            {
+              'name': 'CAIRANI',
+              'localidades': [
+                'CAIRANI'
+              ]
+            },
+            {
+              'name': 'CAMILACA',
+              'localidades': [
+                'ALTO CAMILACA',
+                'CAMBAYA',
+                'CORAGUAYA',
+                'NUEVA CAMILACA'
+              ]
+            },
+            {
+              'name': 'CANDARAVE',
+              'localidades': [
+                'JIRATA',
+                'MULLINI'
+              ]
+            },
+            {
+              'name': 'QUILAHUANI',
+              'localidades': [
+                'QUILAHUANI'
+              ]
+            }
+          ]
+        },
+        {
+          'name': 'GENERAL SANCHEZ CERRO',
+          'distritos': [
+            {
+              'name': 'CHOJATA',
+              'localidades': [
+                'CHOJATA',
+                'PATA PAMPA',
+                'SANTIAGO DE PACHAS',
+                'TTOCJO'
+              ]
+            },
+            {
+              'name': 'COALAQUE',
+              'localidades': [
+                'COALAQUE',
+                'EL ESTANQUE',
+                'HUARANGAYO',
+                'SAN JOSE DE RONJADERO'
+              ]
+            },
+            {
+              'name': 'ICHUÑA',
+              'localidades': [
+                'ICHUÑA',
+                'SANTA CRUZ DE OYO OYO (SANTA CRUZ)'
+              ]
+            },
+            {
+              'name': 'LA CAPILLA',
+              'localidades': [
+                'COALAQUE',
+                'HEMBRUNA',
+                'LA CAPILLA'
+              ]
+            },
+            {
+              'name': 'LLOQUE',
+              'localidades': [
+                'LLOQUE'
+              ]
+            },
+            {
+              'name': 'MATALAQUE',
+              'localidades': [
+                'HUATAGUA',
+                'MATALAQUE'
+              ]
+            },
+            {
+              'name': 'OMATE',
+              'localidades': [
+                'CHALLAHUAYO',
+                'COGRI',
+                'QUINISTACAS',
+                'SAN FRANCISCO',
+                'SAN JUAN DE DIOS'
+              ]
+            },
+            {
+              'name': 'PUQUINA',
+              'localidades': [
+                'CHACAHUAYO',
+                'CHILATA',
+                'CHUÑUHUAYO',
+                'ORLAQUE',
+                'POCOHUAYO',
+                'PUQUINA',
+                'SANTA ROSA DE PUCARA',
+                'SEGUNDIA',
+                'SUBIN',
+                'TALAMOLLE'
+              ]
+            },
+            {
+              'name': 'QUINISTAQUILLAS',
+              'localidades': [
+                'QUINISTAQUILLAS'
+              ]
+            },
+            {
+              'name': 'UBINAS',
+              'localidades': [
+                'ANASCAPA',
+                'ESCACHA',
+                'PACHAMAYO',
+                'QUERALA',
+                'SACOHAYA',
+                'SAN CRISTOBAL DE TORATA',
+                'TAHUACA (SAN MIGUEL NUEVO)',
+                'TASSA',
+                'TONOHAYA',
+                'UBINAS',
+                'YALAGUA',
+                'YUNGA'
+              ]
+            }
+          ]
+        },
+        {
+          'name': 'ILO',
+          'distritos': [
+            {
+              'name': 'EL ALGARROBAL',
+              'localidades': [
+                'EL ALGARROBAL'
+              ]
+            }
+          ]
+        },
+        {
+          'name': 'JORGE BASADRE',
+          'distritos': [
+            {
+              'name': 'ILABAYA',
+              'localidades': [
+                'BOROGUEÑA',
+                'ILABAYA'
+              ]
+            },
+            {
+              'name': 'ITE',
+              'localidades': [
+                'LAS VILCAS',
+                'PAMPA BAJA',
+                'VILLA MILITAR EL EDEN'
+              ]
+            },
+            {
+              'name': 'LOCUMBA',
+              'localidades': [
+                'ALTO CAMIARA',
+                'LOCUMBA',
+                'PAMPA SITANA',
+                'PUENTE CAMIARA'
+              ]
+            }
+          ]
+        },
+        {
+          'name': 'MARISCAL NIETO',
+          'distritos': [
+            {
+              'name': 'CARUMAS',
+              'localidades': [
+                'ATASPAYA',
+                'CAMBRUNE',
+                'CARUMAS',
+                'SAILAPA',
+                'SOLAJO',
+                'SOMOA',
+                'TITIRE'
+              ]
+            },
+            {
+              'name': 'CUCHUMBAYA',
+              'localidades': [
+                'CUCHUMBAYA',
+                'QUEBAYA',
+                'SACUAYA',
+                'SOQUEZANE',
+                'YOJO'
+              ]
+            },
+            {
+              'name': 'MOQUEGUA',
+              'localidades': [
+                'ESTUQUIÑA',
+                'LA BODEGUILLA',
+                'LOS ANGELES',
+                'REP TORATA'
+              ]
+            },
+            {
+              'name': 'SAMEGUA',
+              'localidades': [
+                'BUENA VISTA',
+                'EL MOLINO'
+              ]
+            },
+            {
+              'name': 'SAN CRISTOBAL',
+              'localidades': [
+                'ARUNTAYA',
+                'CALACOA',
+                'PUEBLO NUEVO SAN CRISTOBA',
+                'TITIRE'
+              ]
+            },
+            {
+              'name': 'TORATA',
+              'localidades': [
+                'QUELE',
+                'YACANGO'
+              ]
+            }
+          ]
+        },
+        {
+          'name': 'TACNA',
+          'distritos': [
+            {
+              'name': 'CALANA',
+              'localidades': [
+                'CERRO BLANCO',
+                'PIEDRA BLANCA',
+                'SANTA RITA'
+              ]
+            },
+            {
+              'name': 'INCLAN',
+              'localidades': [
+                'ASOCIACIÓN DE VIVIENDA PROTER SAMA',
+                'SAMA GRANDE',
+                'TOMASIRI'
+              ]
+            },
+            {
+              'name': 'LA YARADA DE LOS PALOS',
+              'localidades': [
+                'PESCADORES SANTA ROSA',
+                'ASENTAMIENTO 3 (28 DE AGOSTO)',
+                'ASENTAMIENTO 4',
+                'ASENTAMIENTO 5 Y 6',
+                'ASOCIACION DE CRIAMEN 26 DE OCTUBRE LAS LAGUNAS',
+                'COPARE II (NUEVO COPARE)',
+                'HOSPICIO 60 - LA YARADA',
+                'LA ESPERANZA 1',
+                'LOS OLIVOS',
+                'LOS PALOS',
+                'PUEBLO LIBRE'
+              ]
+            },
+            {
+              'name': 'PACHIA',
+              'localidades': [
+                'CALIENTES',
+                'MICULLA',
+                'PACHIA'
+              ]
+            },
+            {
+              'name': 'PALCA',
+              'localidades': [
+                'EL INGENIO LA LIBERTAD (ALTO INGENIO)',
+                'PALCA'
+              ]
+            },
+            {
+              'name': 'SAMA',
+              'localidades': [
+                'BOCA DEL RIO',
+                'BUENA VISTA',
+                'MORRO SAMA (PUERTO GRAU)',
+                'VILA VILA'
+              ]
+            },
+            {
+              'name': 'TACNA',
+              'localidades': [
+                'MAGOLLO (IRRIGACION MAGOLLO)'
+              ]
+            }
+          ]
+        },
+        {
+          'name': 'TARATA',
+          'distritos': [
+            {
+              'name': 'ESTIQUE',
+              'localidades': [
+                'ESTIQUE',
+                'TALABAYA'
+              ]
+            },
+            {
+              'name': 'ESTIQUE-PAMPA',
+              'localidades': [
+                'ESTIQUE PAMPA'
+              ]
+            },
+            {
+              'name': 'HEROES ALBARRACIN',
+              'localidades': [
+                'CHUCATAMANI'
+              ]
+            },
+            {
+              'name': 'SITAJARA',
+              'localidades': [
+                'SITAJARA'
+              ]
+            },
+            {
+              'name': 'SUSAPAYA',
+              'localidades': [
+                'SUSAPAYA',
+                'YABROCO'
+              ]
+            },
+            {
+              'name': 'TARATA',
+              'localidades': [
+                'PUEBLO LIBRE UMUTE'
+              ]
+            },
+            {
+              'name': 'TARUCACHI',
+              'localidades': [
+                'TARUCACHI'
+              ]
+            },
+            {
+              'name': 'TICACO',
+              'localidades': [
+                'TICACO'
+              ]
+            }
+          ]
+        }
+      ];
+    $(function () {
+      $('#provincia').fancySelect();
+      $('#distrito').fancySelect();
+      $('#localidad').fancySelect();
+
+      var provs = '';
+      $(provincias).each(function (i, provincia) {
+        provs += '<option value="' + i + '">' + provincia.name + '</option>';
+      });
+      $('#provincia').html(provs);
+      $('#provincia').on('change.fs', function (e) {
+        console.log(e);
+      });
+
+      $('#provincia').on('change', function () {
+        var prov = $(this).val();
+        console.log('prov', prov);
+        //$('#distrito').hide();
+        //$('#localidad').hide();
+        //if(prov!=0) {
+        var dists = '';
+        console.log('distritos', provincias[prov]['distritos']);
+        $(provincias[prov]['distritos']).each(function (i, distrito) {
+          dists += '<option value="' + i + '">' + distrito.name + '</option>';
+        });
+        $('#distrito').html(dists);
+        $('#distrito').trigger('update');
+        $('#distrito').trigger('change.fs');
+        //$('#distrito').show();
+        //}
+      });
+      $('#provincia').on('change.fs', function () {
+        $(this).trigger('change.$');
+      });
+
+      $('#distrito').change(function () {
+        var prov = $('#provincia').val();
+        var dist = $(this).val();
+        //$('#localidad').hide();
+        //if(dist!=0) {
+        var locs = '';
+        $(provincias[prov]['distritos'][dist]['localidades']).each(function (i, localidad) {
+          locs += '<option value="' + i + '">' + localidad + '</option>';
+        });
+        $('#localidad').html(locs);
+        //$('#localidad').show();
+        $('#localidad').trigger('update');
+        $('#localidad').trigger('change.fs');
+        //}
+      });
+      $('#distrito').on('change.fs', function () {
+        $(this).trigger('change.$');
+      });
+
+      $('#provincia').trigger('update');
+      $('#provincia').trigger('change');
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(document).on('click', '.browse', function () {
+      var file = $(this).parent().parent().parent().find('.file');
+      file.trigger('click');
+    });
+    $(document).on('change', '.file', function () {
+      $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+    });
+  </script>
+  <!-- BOLSA LABORAL -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    $(function () {
+      $("#form-bolsa").on("submit", function (e) {
+        e.preventDefault();
+        var f = $(this);
+        var formData = new FormData(document.getElementById("form-bolsa"));
+        //formData.append(f.attr("name"), $(this)[0].files[0]);
+        $.ajax({
+          url: "include/send-bolsa.php",
+          type: "post",
+          dataType: "json",
+          data: formData,
+          cache: false,
+          contentType: false,
+          processData: false
+        })
+          .done(function (resp) {
+            console.log('resp', resp);
+            if (resp.error) {
+              Swal.fire('Error', resp.message, 'error');
+            } else {
+              Swal.fire('', 'Mensaje enviado correctamente', 'success');
+              $("#form-bolsa").trigger('reset')
+            }
+
+          })
+          .fail(function (resp) {
+            Swal.fire('', 'Error al Enviar Mensaje', 'error');
+          });
+      });
+
+      $('#form-boletin').submit(function (e) {
+        e.preventDefault();
+        var data = $(this).serialize();
+        console.log('data', data);
+        $.post('include/send-boletin.php', data, function (resp) {
+          if (resp.error) {
+            alert('Error al Enviar Mensaje');
+            $('#form-boletin').trigger('reset');
+          } else {
+            alert('Mensaje enviado correctamente');
+            $('#form-boletin').trigger('reset');
+          }
+        }, 'json').fail(function () {
+          alert('Error al Enviar Mensaje');
+          $('#form-boletin').trigger('reset');
+        });
+      });
+    });
+  </script>
+  <!-- CONTACTO -->
+  <script src="/assets/js/plugins/bootstrap-progressbar.min.js"></script>
+     <script src="/assets/js/plugins/custom-progressbar.js"></script>
+  <script>
+  $(function(){
+      $('#form-contacto').submit(function(e){
+          e.preventDefault();
+          //if(!$('#form-contacto .politicas').prop('checked')) return false;
+          var data = $(this).serialize();
+          console.log('data', data);
+          $.post('include/send-contacto2.php',data,function(resp){
+              if(resp.error) {
+                  $('#div-contacto').html('<h4>Error al Enviar Mensaje</h4>');
+              } else {
+                  $('#div-contacto').html('<h4>Mensaje Enviado Correctamente</h4>');	
+              }					
+          },'json').fail(function(){
+              $('#div-contacto').html('<h4>Error al Enviar Mensaje</h4>');
+          });
+          return false;
+      });
+
+      $('#form-boletin').submit(function(e){
+          e.preventDefault();
+          var data = $(this).serialize();
+          console.log('data', data);
+          $.post('include/send-boletin.php',data,function(resp){
+              if(resp.error) {
+                  alert('Error al Enviar Mensaje');
+                  $('#form-boletin').trigger('reset');
+              } else {
+                  alert('Mensaje enviado correctamente');
+                  $('#form-boletin').trigger('reset');
+              }					
+          },'json').fail(function(){
+              alert('Error al Enviar Mensaje');
+              $('#form-boletin').trigger('reset');
+          });
+      });
+  });
+  </script>
+
+<!-- ABONADOS -->
+  <script>
+  $(function(){
+      $('#form-contacto').submit(function(e){
+          e.preventDefault();
+          var data = $(this).serialize();
+          console.log('data', data);
+          $.post('include/send-contacto.php',data,function(resp){
+              if(resp.error) {
+                  $('#div-contacto').html('<h4>Error al Enviar Mensaje</h4>');
+              } else {
+                  $('#div-contacto').html('<h4>Mensaje Enviado Correctamente</h4>');	
+              }					
+          },'json').fail(function(){
+              $('#div-contacto').html('<h4>Error al Enviar Mensaje</h4>');
+          });
+          return false;
+      });			
+  });
+  </script>
+  <!-- Back To Top -->
+  <!-- Switcher -->
+  <!-- End Switcher -->
+  <!-- SCRIPT -->
+  <!-- Sticky -->
+  <!-- <script src="js/plugins/sticky.js"></script> -->
+  <!-- Mobile Menu
+    ================================================== -->
+  <!-- REVOLUTION JS FILES -->
+  <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+  <!-- Initializing Owl Carousel
+    ================================================== -->
+  <!-- PreLoad
+    ================================================== -->
+  <!-- Parallax -->
+  <!-- <script src="js/plugins/parallax.js"></script> -->
+  <!-- Fancy Select -->
+  <!-- Magnific Popup core JS file -->
+  <!-- Initializing Counter Up
+    ================================================== -->
+  <!-- Twitter -->
+
+  <!-- Global Js
+    ================================================== -->
+  <!-- Demo Switcher
+    ================================================== -->
+  <!-- <script src="switcher/demo.js"></script> -->
+
+  <!-- Demo Switcher
+      ================================================== -->
+  <!-- <script src="switcher/demo.js"></script> -->
+
+
+  <!-- Button Input style -->
+  <!-- Global Js
+      ================================================== -->
+
+  <!-- Demo Switcher
+      ================================================== -->
+  <!-- <script src="switcher/demo.js"></script> -->
+
+
+  <!-- <script src="switcher/demo.js"></script> -->
+
+
+<script src="runtime.b7e0d426e0f44c95.js" type="module"></script><script src="polyfills.d1c5bb9134511400.js" type="module"></script><script src="main.b070464606b5b5b3.js" type="module"></script>
+
+</body></html>

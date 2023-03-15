@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
 const { loginuser, renewUser } = require('../controllers/auth.controller');
-const { getDetPaginas,putDetPaginas } = require('../controllers/Detpagina.controller');
+const { getDetPaginas,POSTDetPaginas } = require('../controllers/Detpagina.controller');
 
 
 const router = Router();
@@ -10,7 +10,7 @@ const router = Router();
 
 //login de usuario
 router.post('/', getDetPaginas);
-router.put('/actualizar', putDetPaginas);
+router.post('/actualizar', POSTDetPaginas);
 
 
 //Listar Paginas

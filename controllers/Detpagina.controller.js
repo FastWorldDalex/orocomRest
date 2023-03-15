@@ -11,6 +11,7 @@ const actualizarPagina = (req, res = response) => {
         Descripcion_Uno: _Descripcion_Uno,
         Descripcion_Dos: _Descripcion_Dos,
         Descripcion_tres: _Descripcion_tres,
+        Descripcion_Cuatro: _Descripcion_Cuatro,
         Imagen_Name: _Imagen_Name,
         Imagen_Type: _Imagen_Type,
         Imagen_Size: _Imagen_Size,
@@ -31,6 +32,7 @@ const actualizarPagina = (req, res = response) => {
             _Descripcion_Uno,
             _Descripcion_Dos,
             _Descripcion_tres,
+            _Descripcion_Cuatro,
             _Imagen_Name,
             _Imagen_Type,
             _Imagen_Size,
@@ -39,9 +41,9 @@ const actualizarPagina = (req, res = response) => {
             _Fecha_Modificacion,
             _IdPadre
         );
-        actualizarDetPagina(DDBBconnecion, detPagina, async (PUT) => {
-            console.log("DETALLE DE PAGINA ACTUALIZADO", PUT);
-            if(PUT == undefined){
+        actualizarDetPagina(DDBBconnecion, detPagina, async (POST) => {
+            console.log("DETALLE DE PAGINA ACTUALIZADO", POST);
+            if(POST == undefined){
                 return res.status(405).json({
                     ok: false,
                     msg: 'Actualización fallida'
@@ -65,12 +67,12 @@ const actualizarPagina = (req, res = response) => {
 const obtenerDetPaginas = (req, res = response) => {
 
     try {
-        getDetPagina(DDBBconnecion, async (PUT) => {
-            console.log("PAGINA REGISTRADO traer", PUT);
+        getDetPagina(DDBBconnecion, async (POST) => {
+            console.log("PAGINA REGISTRADO traer", POST);
 
             return res.status(200).json({
                 ok: true,
-                msg: PUT
+                msg: POST
             });
         });
 
@@ -84,5 +86,5 @@ const obtenerDetPaginas = (req, res = response) => {
 };
 module.exports = {
     getDetPaginas: obtenerDetPaginas,
-    putDetPaginas: actualizarPagina,
+    POSTDetPaginas: actualizarPagina,
 }

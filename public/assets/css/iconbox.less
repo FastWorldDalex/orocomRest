@@ -1,0 +1,83 @@
+/* 
+   Icon Box
+   ========================================================================== */
+   .iconbox
+   {
+   		padding-right:40px;
+   		.icon,.fa,.lnr{transition:@slow;font-size: 32px;color:@sub-color;display: block;width:83px;height: 83px;line-height: 76px;border:2px solid @sub-color;border-radius: 50%;text-align: center; }
+   		&:hover .icon{color:#fff;background: @sub-color;}
+   		h4{margin-top:25px;margin-bottom: 7px;}
+   }
+   .iconbox.text-center
+   {
+      .icon,.fa,.lnr{margin-left: auto;margin-right: auto;float:none;}
+   }
+   .iconbox-type-sm
+   {
+   		padding:60px 40px;
+   		.icon,.fa,.lnr{font-size: 42px;color:@sub-color; }
+   		h4{margin-top:13px;margin-bottom: 28px;}
+   		p{margin-bottom: 40px;}
+   }
+   .iconbox-type-xs
+   {
+   		padding:40px 30px;
+   		.icon,.fa,.lnr{font-size: 42px;color:@sub-color; }
+   		h4{margin-top:13px;margin-bottom: 28px;}
+   		
+   		cursor: pointer;
+   }
+   .iconbox-type-xx
+   {
+      padding:40px 30px;
+      .icon,.fa,.lnr{font-size: 42px;color:@sub-color; }
+      h4{margin-top:13px;margin-bottom: 28px;}
+      
+      cursor: pointer;
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+   .iconbox-overlay-bg
+   {
+   		transition:@slow;
+   		h4,p,.ot-btn{transition:@slow;}
+   }
+   .iconbox-overlay-bg:hover
+   {
+   		background: @main-color;
+   		h4,p{color:#fff;}
+   	  .ot-btn{border-color:#fff;color:#fff;}	
+   }
+   .iconbox-overlay-bg .ot-btn:hover{color:#fff;background: @sub-color;border-color:@sub-color}
+   .iconbox-inline
+   {
+         padding-left: 110px;position: relative;
+         .icon,.fa,.lnr{transition:@slow;font-size: 32px;color:@sub-color;display: block;width:83px;height: 83px;line-height: 76px;border:2px solid @sub-color;border-radius: 50%;text-align: center;position: absolute;top:0;left:0; }
+         &:hover .icon{color:#fff;background: @sub-color;}
+         h4{margin-top:25px;margin-bottom: 10px;}
+   }
+
+   .icon-box-on-dark{transition:@slow;h4{color:#fff;}p{color:#bababa}span,p{transition:@slow;}}
+   .icon-box-on-dark:hover{background: @main-color;p{color:#fff}span,i{color:#fff;}}
+   /* Counter Up Icon */
+      .counter-inline
+      {
+            padding-left: 65px;position: relative;width: 100%;
+            .icon,.fa,.lnr{font-size: 38px;color:@sub-color;display: block;position: absolute;top:0;left:0; }
+            span{font-size:46px;margin-bottom: 7px;color:#fff;font-weight: 600;line-height: 46px;}
+            p{font-size: 16px;color:#fff;}
+      }
+      .counter-inline.ct-on-dark{span{color:#222;}p{color:#727272}.icon,.fa,.lnr{color:@sub-color;}}
+
+      .counter-block
+      {
+            text-align: center;
+            .icon,.fa,.lnr{font-size: 38px;color:@sub-color;display: block;margin-bottom: 15px;}
+            span{font-size:46px;;color:#fff;font-weight: 600;line-height: 46px;}
+            p{font-size: 16px;color:#bababa;line-height: 30px;}
+      }
+       .counter-on-light
+      {
+        span.counter{color:#222;}
+        p{color:#727272;}
+      }

@@ -8,6 +8,7 @@ class DetPagina {
         _Descripcion_Uno,
         _Descripcion_Dos,
         _Descripcion_tres,
+        _Descripcion_Cuatro,
         _Imagen_Name,
         _Imagen_Type,
         _Imagen_Size,
@@ -23,6 +24,7 @@ class DetPagina {
         this.Descripcion_Uno = _Descripcion_Uno;
         this.Descripcion_Dos = _Descripcion_Dos;
         this.Descripcion_tres = _Descripcion_tres;
+        this.Descripcion_Cuatro = _Descripcion_Cuatro;
         this.Imagen_Name = _Imagen_Name;
         this.Imagen_Type = _Imagen_Type;
         this.Imagen_Size = _Imagen_Size;
@@ -38,6 +40,7 @@ class DetPagina {
     Descripcion_Uno;
     Descripcion_Dos;
     Descripcion_tres;
+    Descripcion_Cuatro;
     Imagen_Name;
     Imagen_Type;
     Imagen_Size;
@@ -61,8 +64,8 @@ function getDetPagina(connection, callback) {
 }
 
 function actualizarDetPagina(connection, detPagina, callback) {
-    let updateQuery = "UPDATE DetPagina set Descripcion_Uno = ?,Descripcion_Dos = ?,Descripcion_tres = ?,Imagen_Name  = ? ,Imagen_Type= ? ,Imagen_Size  = ?,Imagen_Base  = ?, usuario_Modificacion  = ?,Fecha_Modificacion  = ?,IdPadre  = ? WHERE IdDetpagina  = ? and Idpagina  = ?";
-    let query = mysql.format(updateQuery, [detPagina.Descripcion_Uno,detPagina.Descripcion_Dos,detPagina.Descripcion_tres, detPagina.Imagen_Name, detPagina.Imagen_Type, detPagina.Imagen_Size, detPagina.Imagen_Base, detPagina.usuario_Modificacion, detPagina.fecha_modificacion,detPagina.IdPadre, detPagina.id, detPagina.Idpagina]);
+    let updateQuery = "UPDATE DetPagina set Descripcion_Uno = ?,Descripcion_Dos = ?,Descripcion_tres = ?,Descripcion_Cuatro = ?,Imagen_Name  = ? ,Imagen_Type= ? ,Imagen_Size  = ?,Imagen_Base  = ?, usuario_Modificacion  = ?,Fecha_Modificacion  = ?,IdPadre  = ? WHERE IdDetpagina  = ? and Idpagina  = ?";
+    let query = mysql.format(updateQuery, [detPagina.Descripcion_Uno,detPagina.Descripcion_Dos,detPagina.Descripcion_tres, detPagina.Descripcion_Cuatro, detPagina.Imagen_Name, detPagina.Imagen_Type, detPagina.Imagen_Size, detPagina.Imagen_Base, detPagina.usuario_Modificacion, detPagina.fecha_modificacion,detPagina.IdPadre, detPagina.id, detPagina.Idpagina]);
 
     connection.query(query, function (error, results, details) {
         console.log('error',error);

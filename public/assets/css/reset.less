@@ -1,0 +1,69 @@
+/* Reset
+----------------------------------------------------------*/
+h1{font-size:40px;}
+h2{font-size:38px;}
+h3{font-size:24px;}
+h4{font-size:18px;}
+h5{font-size:16px;}
+h6{font-size:14px;}
+h1,h2,h3,h4,h5,h6{line-height: 1.4;margin-top:0;color:#222}
+a{text-decoration: none;&:hover{text-decoration:none;}}
+a:hover,a:focus{outline: none;text-decoration: none;}
+body
+{
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	color:#727272;
+	font-weight: 400;
+}
+ul
+{
+	margin:0;padding-left:0;
+}
+section
+{
+	padding:70px 0;
+}
+
+::selection {
+  background: @main-color;
+  color:#fff; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: @main-color;
+  color:#fff; /* Gecko Browsers */
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2px 30px 2px 2px;
+    border: none;
+}
+.custom-select
+	{
+		background: url(images/icon/down.png) no-repeat;
+		background-position: calc(~"100% - 15px") 17px;
+		background-size: 10px auto;
+		transition:@slow;
+	}
+.custom-select:focus{border-color:@main-color!important;}
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=email] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/* ==========================================================================
+   Bootstrap Custom
+   ========================================================================== */
+   @media (min-width: 1200px) {
+	  .container {
+	    width: 1200px;
+	  }
+	}

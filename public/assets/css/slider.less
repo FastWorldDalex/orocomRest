@@ -1,0 +1,191 @@
+/* button slider */
+.sl-btn-1{display:block;font-size: 13px;line-height: 38px;text-align: center;padding:0 22px;border:2px solid #fff;color:#fff;transition:@slow;font-weight: 400}
+.sl-btn-1:hover,.sl-btn-1:focus{border-color:#222;background: #222;color:#fff;}
+.sl-btn-2{display:block;font-size: 13px;line-height: 38px;text-align: center;padding:0 22px;border:2px solid @sub-color;color:#fff;transition:@slow;font-weight: 400;background: @sub-color}
+.sl-btn-2:hover,.sl-btn-2:focus{background: #222;color:#fff;border-color:#222;}
+.sl-btn-3{display:block;font-size: 13px;line-height: 38px;text-align: center;padding:0 22px;border:2px solid @main-color;color:#fff;transition:@slow;font-weight: 400;background: @main-color}
+.sl-btn-3:hover,.sl-btn-3:focus{background:transparent;color:@main-color;}
+.sl-btn-prev{
+	width: 50px;
+	height: 60px;
+	background:#fff;transition:@slow;
+	line-height: 60px;
+	text-align: center;
+	font-size: 31px;
+	color:@main-color;
+	display: block;
+}
+.sl-btn-prev:before
+{
+	width: 0; height: 0; border-top: 60px solid #fff; border-right: 10px solid transparent;
+	content:"";
+	position: absolute;
+	left:98%;
+	top:0;transition:@slow;
+}
+.sl-btn-prev:focus{color:@main-color}
+.sl-btn-next{
+	width: 50px;
+	height: 60px;
+	background:#fff;color:@main-color;
+	line-height: 60px;
+	text-align: center;
+	font-size: 31px;
+	display: block;
+   transition:@slow;
+}
+.sl-btn-next:before
+{
+	width: 0; height: 0; border-bottom: 60px solid #fff; border-left: 10px solid transparent;
+	content:"";
+	position: absolute;
+	right:98%;
+	top:0;
+	transition:@slow;
+}
+.sl-btn-prev:hover,.sl-btn-next:hover{background: @sub-color;color:#fff;}
+.sl-btn-prev:hover:before{border-top: 60px solid @sub-color;}
+.sl-btn-next:hover:before{border-bottom: 60px solid @sub-color}
+/* 
+   Home 1
+   ========================================================================== */
+.slider-home1 .hermes .title-thumb-home1
+{
+	background: @sub-color;
+	letter-spacing: 2px;
+}
+.hermes.tparrows{background: rgba(255, 255, 255, 0.1)}
+.slider-home1 .sl-s2,.slider-home1 .sl-s1{text-align: center;}
+
+
+.sl-s1{font-size: 21px;color:#fff;font-weight: 300;font-family: 'Poppins', sans-serif;}
+.sl-s2{font-size: 60px;color:#fff;font-weight: 500;font-family: 'Poppins', sans-serif;}
+.sl-s2-2{font-size: 60px;color:@main-color;font-weight: 500;font-family: 'Poppins', sans-serif;}
+.sl-s3{font-size: 16px;color:#fff;font-weight: 300;font-family: 'Poppins', sans-serif;line-height: 32px;}
+.sl-s3-2{font-size: 16px;color:#222;font-weight: 300;font-family: 'Poppins', sans-serif;line-height: 32px;}
+.sl-s4{font-size: 32px;color:#fff;font-weight: 300;font-family: 'Poppins', sans-serif;}
+.sl-s4-2{font-size: 32px;color:@main-color;font-weight: 300;font-family: 'Poppins', sans-serif;}
+.sl-s5{font-size: 60px;color:#fff;font-weight: 500;font-family: 'Poppins', sans-serif;line-height: 70px;span{color:@sub-color}}
+.sl-s6{font-size: 70px;color:@main-color;font-weight: 500;font-family: 'Poppins', sans-serif;line-height: 80px}
+
+/* 
+   Home 2
+   ========================================================================== */
+.custom.tparrows
+{
+	width: 50px;
+	height: 60px;
+	background:#fff;transition:@slow;
+	line-height: 60px;
+	text-align: center;
+	font-size: 31px;
+}
+.custom.tparrows.tp-leftarrow{background:#fff;color:@main-color;}
+.custom.tparrows.tp-leftarrow::before
+{
+	width: 0; height: 0; border-top: 60px solid #fff; border-right: 10px solid transparent;
+	content:"";
+	position: absolute;
+	left:98%;
+	top:0;transition:@slow;
+	
+}
+.custom.tparrows.tp-leftarrow:hover{background: @sub-color;color:#fff;}
+.custom.tparrows.tp-leftarrow:hover:before{border-top: 60px solid @sub-color;}
+
+
+.custom.tparrows.tp-rightarrow{background:#fff;color:@main-color;}
+.custom.tparrows.tp-rightarrow::before
+{
+	width: 0; height: 0; border-bottom: 60px solid #fff; border-left: 10px solid transparent;
+	content:"";
+	position: absolute;
+	right:98%;
+	top:0;
+	transition:@slow;
+}
+.custom.tparrows.tp-rightarrow i
+{
+	transform:rotate(180deg);
+	margin-top:15px;
+}
+
+.custom.tparrows.tp-rightarrow:hover{background: @sub-color;color:#fff;}
+.custom.tparrows.tp-rightarrow:hover:before{border-bottom: 60px solid @sub-color;}
+/* 
+   Home 4
+   ========================================================================== */
+   .slider-home4 .sl-s3{color:#222}
+   .slider-home4 .sl-btn-2:hover,.slider-home4 .sl-btn-2:focus{border-color:#222;color:#fff;background: #222;}
+   .slider-home4 .sl-btn-3:hover,.slider-home4 .sl-btn-3:focus{border-color:#222;color:#fff;background: #222;}
+   .slider-home4 .custom.tparrows.tp-leftarrow{background: @main-color;color:#fff;&:hover{background: @sub-color;color:#fff;}}
+   .slider-home4 .custom.tparrows.tp-leftarrow:hover:before{border-top-color:@sub-color;}
+   .slider-home4 .custom.tparrows.tp-leftarrow::before{border-top: 60px solid @main-color;}
+   .slider-home4 .custom.tparrows.tp-rightarrow{background: @main-color;color:#fff;&:hover{background: @sub-color;color:#fff;}}
+   .slider-home4 .custom.tparrows.tp-rightarrow::before{border-bottom: 60px solid @main-color;}
+   .slider-home4 .custom.tparrows.tp-rightarrow:hover:before{border-bottom-color:@sub-color;}
+/* 
+   Home 5
+   ========================================================================== */
+   .banner-h5-warp{width:100%;position: relative;overflow: hidden;}
+   .banner-h5-block{display:block;width: 33.541%;position: absolute;height: 100%;left:0;top:0;padding:140px 80px;background: fade(@main-color, 95%)}
+   .banner-h5-block{
+   		.sl-s2{line-height: 70px;margin-bottom: 40px;font-size:3.125vw;}
+   		.sl-btn-1{display: inline-block;float:left;margin-right:10px;}
+   		.sl-btn-1:hover{color:@main-color;background: #fff;border-color:#fff;}
+   		.sl-btn-2{display: inline-block;float:left;}
+   }
+
+/* 
+   Home 6
+   ========================================================================== */
+   .banner-h6-warp{width: 100%;position: relative; }
+   .banner-h6-inner
+   {
+   		position: absolute;width: 100%;max-width: 580px;left:50%;transform:translate(-50%,-50%);top:50%;
+   		.popup-youtube{display: block;margin:0 auto;}
+         
+   		.sl-s4{color:@main-color;text-align: center;margin-top:40px;}
+   		.sl-s5{color:@main-color;text-align: center;margin-top:18px;}
+   		.sl-s3{color:#222;text-align: center;margin-top:10px;}
+   }
+   .btn-play{display: block;width:100px;height: 100px;border:2px solid @sub-color;border-radius: 50%;color:@sub-color;transition:@slow;text-align: center;line-height: 100px;font-size:40px;i{margin-right: -10px;}}
+   .btn-play:hover,.btn-play:focus{background: @main-color;border-color:@main-color;color:#fff;}
+
+/* 
+   Home 7
+   ========================================================================== */
+   .slider-home7
+   {
+   		.home7-block-text
+   		{
+   			width: 600px;
+   			min-height: 390px;
+   			background: fade(@main-color, 95%);
+   			padding:55px;
+   			white-space:normal;
+   		}
+   		.sl-s4{margin-bottom: 15px;line-height: 32px;}
+   		.sl-s2{margin-bottom: 20px;line-height: 70px;}
+   		.sl-s3{margin-bottom: 35px;}
+   		.sl-btn-1{display: inline-block;float:left;margin-right:10px;line-height: 38px!important;transition:background .3s!important;}
+   		.sl-btn-1:hover{color:@main-color;background: #fff;border-color:#fff;}
+   		.sl-btn-2{display: inline-block;float:left;line-height: 38px!important;transition:background .3s!important;}
+   }
+
+/* 
+   Home 10
+   ========================================================================== */
+
+   .tp-bullets.custom .tp-bullet{width: 10px;height: 10px;border:2px solid #fff;background:transparent;border-radius: 50%;}
+   .tp-bullets.custom .tp-bullet.selected{background:@sub-color;border-color:@sub-color;}
+   .tp-bullets.custom{width:100%!important;max-width: 1170px!important;left:50%!important;transform:translate(-50%,-50px)!important;}
+   @media only screen and (max-width : 1024px) {
+      .tp-bullets.custom{max-width: 768px!important;}
+   }
+   @media only screen and (max-width :768px) {
+      .tp-bullets.custom{max-width: 481px!important;}
+   }
+   @media only screen and (max-width :481px) {
+      .tp-bullets.custom{max-width: 300px!important;}
+   }

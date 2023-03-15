@@ -1,0 +1,146 @@
+/* Main Button Style
+----------------------------------------------------------*/
+
+/*button*/
+.ot-btn
+{
+	font-size:13px;
+	text-align: center;
+	padding:0 22px;
+	line-height: 42px;
+	outline: none;
+	transition:@slow;
+	display: inline-block;
+	&:hover,&:focus
+	{
+		text-decoration: none;
+	}
+}
+/*Style*/
+.btn-rounded 
+{
+	border-radius: 3px;
+}
+.btn-pill
+{
+	border-radius: 25px;
+}
+.block-btn
+{
+	display: block;
+}
+
+/*Size*/
+	
+//*********Color**********//
+.btn-main-color
+{
+	background:@main-color;
+	color:#fff;
+	&:hover,&:focus
+	{
+		background: #222;
+		color:#fff;
+	}
+}
+.btn-sub-color
+{
+	background:@sub-color;
+	color:#fff;
+	&:hover,&:focus
+	{
+		background: #222;
+		color:#fff;
+	}
+}
+
+.btn-dark-color
+{
+	background:#222;
+	color:#fff;
+	&:hover,&:focus
+	{
+		background: @sub-color;
+		color:#fff;
+	}
+}
+
+
+.btn-border-dark-color
+{
+	background: transparent;
+	color:#222;
+	border:2px solid #222;
+	padding:0 20px;
+	line-height: 42px;
+	&:hover,&:focus
+	{
+		background: @sub-color;
+		color:#fff;
+		border-color:@sub-color;
+	}
+}
+.btn-border-white-color
+{
+	background: transparent;
+	color:#fff;
+	border:2px solid #fff;
+	padding:0 20px;
+	line-height: 42px;
+	&:hover,&:focus
+	{
+		background: @main-color;
+		color:#fff;
+		border-color:@main-color;
+	}
+}
+.btn-border-main-color
+{
+	background: transparent;
+	color:@main-color;
+	border:2px solid @main-color;
+	padding:0 20px;
+	line-height: 42px;
+	&:hover,&:focus
+	{
+		background: @sub-color;
+		color:#fff;
+		border-color:@sub-color;
+	}
+}
+
+.btn-border-sub-color
+{
+	background: transparent;
+	color:@sub-color;
+	border:2px solid @sub-color;
+	&:hover,&:focus
+	{
+		background: transparent;
+		color:@main-color;
+		border-color:@main-color;
+	}
+}
+.border-dark-2
+{
+	line-height: 38px;
+	background: transparent;
+	color:#222;
+	border:2px solid #222;
+	&:hover,&:focus
+	{
+		background: #222;
+		color:#fff;
+		border-color:#222;
+	}
+}
+
+
+//*********Icon**********//
+.ot-btn
+{
+	i
+	{
+		margin-left: 5px;
+	}
+}
