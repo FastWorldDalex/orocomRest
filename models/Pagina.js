@@ -14,11 +14,15 @@ class Pagina {
 }
 
 function updatepagina(connection, pagina, callback) {
-    let updateQuery = "UPDATE pagina set Pagina = ?, Usuario_Modificacion  = ?, Fecha_Modificacion  = ? WHERE Idpagina = ? ";
+    let updateQuery = "UPDATE Pagina set Pagina = ?, Usuario_Modificacion  = ?, Fecha_Modificacion  = ? WHERE Idpagina = ? ";
     let query = mysql.format(updateQuery, [pagina.pagina, pagina.usuario_modificacion, pagina.fecha_modificacion, pagina.id]);
     connection.query(query, function (error, results, details) {
         try {
+            console.log("uno",error);
+            console.log("dos",details);
+            console.log("tres",results);
             callback(results);
+            
         } catch (error) {
             throw new Error(error);
         }

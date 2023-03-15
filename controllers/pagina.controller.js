@@ -6,7 +6,7 @@ const { generarJWT } = require('../helpers/jwt');
 
 
 const actualizarPagina = (req, res = response) => {
-    const {id:_Id, pagina: _Pagina, UsuarioModificacion: _Usuario_modificacion, fecha_modificacion: _Fecha_modificacion } = req.body;
+    const {Idpagina:_Id, Pagina: _Pagina, Usuario_Modificacion: _Usuario_modificacion, Fecha_Modificacion: _Fecha_modificacion } = req.body;
 
     try {
         let pagina = new Pagina(_Id, _Pagina, _Usuario_modificacion, _Fecha_modificacion);
