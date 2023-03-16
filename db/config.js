@@ -16,7 +16,7 @@ const DDBBconnecion = mysql.createConnection({
 
 DDBBconnecion.connect(async (err) => {
     if (err) {
-        throw new Error('Algo malo pasó :(');
+        throw new Error('Algo malo pasó :(',err);
     } else {
         console.log('MAN NO SE DESTRUYO EL MUNDO, ESTAMOS CONECTADOS');
     }
