@@ -26,7 +26,7 @@ app.use(express.json());
 
 
 //RUTAS -mideware
-app.use('/api/auth', require('./routes/auth'));
+//app.use('/api/auth', require('./routes/auth'));
 app.use('/api/paginas', require('./routes/pagina'));
 app.use('/api/Detalles', require('./routes/Detpagina'));
 
