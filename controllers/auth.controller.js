@@ -95,7 +95,7 @@ const login = async (req, res = response) => {
             console.log(GET[0].name);
             return res.status(200).json({
                 ok: true,
-                msg: 'Success',
+                msg: 'Acceso Correcto',
                 id: GET[0].id,
                 name: GET[0].name,
                 token: Token

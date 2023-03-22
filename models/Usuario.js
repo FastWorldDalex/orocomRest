@@ -14,7 +14,7 @@ class Usuario {
     isExist;
 }
 function crearUsaurio(connection, usuario, callback) {
-    let insertQuery = "INSERT INTO usuario (name,email,password) values(?,?,?)";
+    let insertQuery = "INSERT INTO Usuario (name,email,password,estado) values(?,?,?,'ACTIVO')";
     let query = mysql.format(insertQuery, [usuario.name, usuario.email, usuario.password]);
     connection.query(query, function (error, results, details) {
         try {
@@ -25,12 +25,13 @@ function crearUsaurio(connection, usuario, callback) {
     });
 }
 function ExisteUsuario(connection, email, callback) {
-    let insertQuery = "select id, name, email, password from usuario where email = ?";
+    console.log("email",email)
+    let insertQuery = "select id, name, email, password from Usuario where email = ?";
     let query = mysql.format(insertQuery, [email]);
     connection.query(query, function (error, results, details) {
         try {
             callback(results);
-            console.log(results);
+            console.log("results",results);
         } catch (error) {
             console.log(error);
             throw new Error(error);
@@ -39,7 +40,7 @@ function ExisteUsuario(connection, email, callback) {
 }
 
 function actualizarUsuario(connection, usuario, callback) {
-    let updateQuery = "UPDATE usuario set name = ?, email = ?, password = ? WHERE id = ?";
+    let updateQuery = "UPDATE Usuario set name = ?, email = ?, password = ? WHERE id = ? and estado = 'ACTIVO'";
     let query = mysql.format(updateQuery, [usuario.name, usuario.email, usuario.password, usuario.id]);
 
     connection.query(query, function (error, results, details) {

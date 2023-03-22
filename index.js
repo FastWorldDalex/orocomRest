@@ -20,13 +20,12 @@ app.use(express.urlencoded({ limit: '50mb' }));
 //CORS
 app.use(cors());
 
-
 //Lectura y parseo de body
 app.use(express.json());
 
 
 //RUTAS -mideware
-//app.use('/api/auth', require('./routes/auth'));
+app.use('/api/auth', require('./routes/auth'));
 app.use('/api/paginas', require('./routes/pagina'));
 app.use('/api/Detalles', require('./routes/Detpagina'));
 

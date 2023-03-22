@@ -10,14 +10,14 @@ const router = Router();
 //crear usuario
 router.post('/new',[
     check('name','El nombre es obligatorio').not().isEmpty(),
-    check('email','El email es obligatorio').isEmail(),
+    check('email','El email es obligatorio').isString(),
     check('password','La contraseña es obligatorio').isLength({min:6}),
     validarCampos
 ],createUser);
 
 //login de usuario
 router.post('/', [
-    check('email','El email es obligatorio').isEmail(),
+   // check('email','El email es obligatorio').isEmpty(),
     check('password','la contraseña es obligatoria').isLength({min:6}),
     validarCampos
 ],loginuser);
