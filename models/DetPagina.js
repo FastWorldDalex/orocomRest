@@ -50,26 +50,36 @@ class DetPagina {
     IdPadre;
 }
 
-function getDetPagina(connection, callback) {
-    let insertQuery = "select * from DetPagina";
-    let query = mysql.format(insertQuery);
-    connection.query(query, function (error, result,details) {
+function getDetPagina(connection, detPagina, callback) {
+    let insertQuery = "";
+    let query = null;
+
+    if (detPagina.Idpagina == null || detPagina.Idpagina == undefined) {
+        insertQuery = "select * from DetPagina";
+        query = mysql.format(insertQuery);
+    }else{
+        insertQuery = "select * from DetPagina WHERE Idpagina  = ?";
+        query = mysql.format(insertQuery, [detPagina.Idpagina]);
+    }
+
+
+    connection.query(query, function (error, result, details) {
         try {
             callback(result);
         } catch (error) {
             throw new Error(error);
-            
+
         }
     });
 }
 
 function actualizarDetPagina(connection, detPagina, callback) {
     let updateQuery = "UPDATE DetPagina set Descripcion_Uno = ?,Descripcion_Dos = ?,Descripcion_tres = ?,Descripcion_Cuatro = ?,Imagen_Name  = ? ,Imagen_Type= ? ,Imagen_Size  = ?,Imagen_Base  = ?, usuario_Modificacion  = ?,Fecha_Modificacion  = ?,IdPadre  = ? WHERE IdDetpagina  = ? and Idpagina  = ?";
-    let query = mysql.format(updateQuery, [detPagina.Descripcion_Uno,detPagina.Descripcion_Dos,detPagina.Descripcion_tres, detPagina.Descripcion_Cuatro, detPagina.Imagen_Name, detPagina.Imagen_Type, detPagina.Imagen_Size, detPagina.Imagen_Base, detPagina.usuario_Modificacion, detPagina.fecha_modificacion,detPagina.IdPadre, detPagina.id, detPagina.Idpagina]);
+    let query = mysql.format(updateQuery, [detPagina.Descripcion_Uno, detPagina.Descripcion_Dos, detPagina.Descripcion_tres, detPagina.Descripcion_Cuatro, detPagina.Imagen_Name, detPagina.Imagen_Type, detPagina.Imagen_Size, detPagina.Imagen_Base, detPagina.usuario_Modificacion, detPagina.fecha_modificacion, detPagina.IdPadre, detPagina.id, detPagina.Idpagina]);
 
     connection.query(query, function (error, results, details) {
-        console.log('error',error);
-        console.log('results',results);
+        console.log('error', error);
+        console.log('results', results);
         try {
             callback(results);
         } catch (error) {
